@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Security Web App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Network Security Web App</h1>
+    <div style="text-align: center;">
+        <button id="startArpDetectionBtn">Start ARP Detection</button>
+        <button id="startCaptureBtn">Start Capture</button>
+        <button id="stopCaptureBtn">Stop Capture</button>
+        <button id="analyzeCaptureBtn">Analyze Capture</button>
+        <button id="downloadCaptureBtn">Download Capture</button>
+        <button id="downloadLogsBtn">Download Logs</button>
+    </div>
+
+    <div id="statusMessage"></div>
+
+    <h2>Capture Analysis</h2>
+    <table id="analysisTable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Time</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Protocol</th>
+                <th>Length</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        document.getElementById('startArpDetectionBtn').addEventListener('click', function() {
+            fetch('/start_arp_detection', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('statusMessage').innerText = data.status;
+                });
+        });
+
+        document.getElementById('startCaptureBtn').addEventListener('click', function() {
+            fetch('/start_capture', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('statusMessage').innerText = data.status;
+                });
+        });
+
+        document.getElementById('stopCaptureBtn').addEventListener('click', function() {
+            fetch('/stop_capture', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('statusMessage').innerText = data.status;
+                });
+        });
+
+        document.getElementById('analyzeCaptureBtn').addEventListener('click', function() {
+            fetch('/analyze_capture')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('analysisTable').getElementsByTagName('tbody')[0];
+                    tableBody.innerHTML = '';
+                    if (data.packet_info) {
+                        data.packet_info.forEach(packet => {
+                            const row = tableBody.insertRow();
+                            row.insertCell(0).innerText = packet.no;
+                            row.insertCell(1).innerText = packet.time;
+                            row.insertCell(2).innerText = packet.source;
+                            row.insertCell(3).innerText = packet.destination;
+                            row.insertCell(4).innerText = packet.protocol;
+                            row.insertCell(5).innerText = packet.length;
+                        });
+                    } else if (data.error) {
+                        document.getElementById('statusMessage').innerText = data.error;
+                    }
+                });
+        });
+
+        document.getElementById('downloadCaptureBtn').addEventListener('click', function() {
+            window.location.href = '/download_capture';
+        });
+
+        document.getElementById('downloadLogsBtn').addEventListener('click', function() {
+            window.location.href = '/download_logs';
+        });
+    </script>
+</body>
+</html>

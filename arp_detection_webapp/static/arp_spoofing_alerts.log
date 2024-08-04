@@ -1,0 +1,25 @@
+2024-08-03 23:38:58,704 -  * Debugger is active!
+2024-08-03 23:39:21,869 - Possible ARP Spoofing detected: IP 192.168.29.20 is at MAC dc:21:5c:e1:9f:e2
+2024-08-03 23:39:21,871 - Possible ARP Spoofing detected: IP 192.168.29.1 is at MAC 34:d8:56:1f:42:39
+2024-08-04 11:25:40,992 -  * Debugger is active!
+2024-08-04 11:25:52,877 - Possible ARP Spoofing detected: IP 192.168.29.20 is at MAC dc:21:5c:e1:9f:e2
+2024-08-04 11:25:52,879 - Possible ARP Spoofing detected: IP 192.168.29.1 is at MAC 34:d8:56:1f:42:39
+2024-08-04 11:27:55,236 -  * Debugger is active!
+2024-08-04 11:28:09,138 -  * Debugger is active!
+2024-08-04 11:28:39,017 -  * Debugger is active!
+2024-08-04 11:28:50,023 - Capture file does not exist.
+2024-08-04 11:28:50,023 - Error analyzing capture: Capture file does not exist.
+2024-08-04 11:28:50,743 - Capture file does not exist.
+2024-08-04 11:28:50,743 - Error analyzing capture: Capture file does not exist.
+2024-08-04 11:28:59,671 - Capture file does not exist.
+2024-08-04 11:28:59,671 - Error analyzing capture: Capture file does not exist.
+2024-08-04 11:29:50,447 - Capture file does not exist.
+2024-08-04 11:29:50,447 - Error analyzing capture: Capture file does not exist.
+2024-08-04 11:33:56,744 -  * Debugger is active!
+2024-08-04 11:34:29,591 -  * Debugger is active!
+2024-08-04 11:34:48,934 -  * Debugger is active!
+2024-08-04 11:34:56,159 - Error downloading capture: [WinError 2] The system cannot find the file specified: 'C:\\Users\\MariAnn\\Desktop\\arp_detection_webapp2\\static/captures/network_traffic.pcap'
+2024-08-04 11:34:58,965 - Capture file does not exist.
+2024-08-04 11:34:58,965 - Error analyzing capture: Capture file does not exist.
+2024-08-04 11:40:05,618 -  * Debugger is active!
+2024-08-04 11:40:05,758 -  * Debugger is active!

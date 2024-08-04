@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text color for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #1e90ff; /* Dodger blue */
+    margin: 20px;
+}
+
+button {
+    background-color: #4682b4; /* Steel blue */
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4169e1; /* Royal blue */
+}
+
+#statusMessage {
+    text-align: center;
+    font-size: 18px;
+    color: #4682b4; /* Steel blue */
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #b0c4de; /* Light steel blue */
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #1e90ff; /* Dodger blue */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e6f0ff; /* Light blue */
+}
+
+tr:nth-child(odd) {
+    background-color: #f0f8ff; /* Very light blue */
+}
